@@ -53,6 +53,7 @@ resource "google_compute_instance" "terraform-nginx" {
       type     = "ssh"
       user     = "root"
       private_key = file("/root/.ssh/id_rsa")
+      host        = self.network_interface[0].access_config[0].nat_ip
     }
   }
 
@@ -63,6 +64,7 @@ resource "google_compute_instance" "terraform-nginx" {
       type     = "ssh"
       user     = "root"
       private_key = file("/root/.ssh/id_rsa")
+      host        = self.network_interface[0].access_config[0].nat_ip
     }
   }
 }
