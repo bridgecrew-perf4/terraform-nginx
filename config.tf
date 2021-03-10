@@ -61,7 +61,7 @@ resource "google_compute_instance" "terraform-nginx" {
 
   provisioner "file" {
     source      = "index.html"
-    destination = "/var/www/html"
+    destination = "/var/www/html/index.html"
     connection {
       type     = "ssh"
       user     = "root"
