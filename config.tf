@@ -47,7 +47,7 @@ resource "google_compute_instance" "terraform-nginx" {
 
   provisioner "remote-exec" {
     inline = [
-      "sudo apt-get update && sudo apt-get install default-jre && sudo apt-get install nginx -y"
+      "sudo apt-get update && sudo apt-get install nginx -y"
     ]
     connection {
       type     = "ssh"
